@@ -22,7 +22,7 @@ def fetch_config(url, server_number):
         response.raise_for_status()
         content = response.text.strip()
         if content.startswith('ss://'):
-            content = f"{content}#Server-{server_number}"
+            content = f"{content}#Suevpnx-{server_number}"
             logger.info(f"Successfully fetched config from {https_url} and added server number")
             return content
         else:
